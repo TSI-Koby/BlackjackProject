@@ -19,13 +19,13 @@ Blackjack project with CI pipeline and testing
 * [Testing](#Testing)
 * [Future Improvement](#Future-Improvement)
 
-##Architecture
+## Architecture
 
-###Microservice Architecture
+### Microservice Architecture
 
-###SpringBoot Setup
+### SpringBoot Setup
 
-###React Setup
+### React Setup
 
 ## Development Environment
 
