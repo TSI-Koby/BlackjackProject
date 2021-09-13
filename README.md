@@ -6,6 +6,10 @@ Blackjack project with CI pipeline and testing
 ## Contents
 
 * [Intro](#Blackjack-Project)
+* [Architecture](#Architecture)
+  * [Microservice Architecture](#Microservice-Architecture)
+  * [SpringBoot Setup](#SpringBoot-Setup)
+  * [React Setup](#React-Setup)
 * [Development Environment](#Development-Environment)
   * [Tools](#Tools)
   * [Kanban Board](#Kanban-Board)
@@ -14,6 +18,14 @@ Blackjack project with CI pipeline and testing
   * [Jenkins](#Jenkins)
 * [Testing](#Testing)
 * [Future Improvement](#Future-Improvement)
+
+##Architecture
+
+###Microservice Architecture
+
+###SpringBoot Setup
+
+###React Setup
 
 ## Development Environment
 
@@ -47,6 +59,11 @@ I know nothing about Jenkins
 -->
 
 ## Testing
+<!---
+Insert testing section
+-->
 
 ## Future Improvement
-
+<!---
+Insert future improvement section
+-->
