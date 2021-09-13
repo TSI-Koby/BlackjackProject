@@ -19,13 +19,32 @@ Blackjack project with CI pipeline and testing
 
 ### Tools
 
+* IntelliJ IDEA 2021.1 Community Edition
+* Java 16
+* Git 2.33
+* GitHub
+* SonarCloud
+* Apache Maven 3.8.1
+* JUnit 5.7.2
+* Maven sure-fire plug-in 3.0.0-M5
+
 ### Kanban Board
 
 ## CI Pipeline
 
 ### GitHub
 
+GitHub is used as a version control system. It currently only
+contains a main branch.
+
+<!---
+INSERT GITHUB GRAPHIC HERE
+-->
+
 ### Jenkins
+<!---
+I know nothing about Jenkins
+-->
 
 ## Testing
 
