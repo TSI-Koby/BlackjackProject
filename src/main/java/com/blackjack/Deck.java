@@ -81,8 +81,7 @@ public class Deck {
     return deck;
     }
 
-    public static Stack<Card> shuffleDeck(Stack<Card> deck) {
+    public static void shuffleDeck(Stack<Card> deck) {
         Collections.shuffle(deck);
-        return deck;
     }
 }
