@@ -26,6 +26,9 @@ project.
 
 ## Architecture
 
+![alt text](https://github.com/TSI-Koby/BlackjackProject/blob/main/READMEFiles/Architecture.jpg)
+
+
 ### SpringBoot Setup
 
 * Go to https://start.spring.io/
@@ -46,9 +49,7 @@ This creates the standard React Service
 
 Jira is being used for Kanban Board to visualise the work to be done:
 
-<!---
-INSERT KANBAN BOARD IMAGE
--->
+![alt text](https://github.com/TSI-Koby/BlackjackProject/blob/main/READMEFiles/JiraKanbanBoard.ppp)
 
 ### React Server Setup
 
