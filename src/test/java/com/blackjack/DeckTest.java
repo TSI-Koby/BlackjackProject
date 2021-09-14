@@ -24,7 +24,7 @@ public class DeckTest {
         Deck.shuffleDeck(deckShuffled);
         Object[] deckA = deck.toArray();
         Object[] deck2A = deckShuffled.toArray();
-        assertNotEquals(deckA, deck2A, "still broken bozo");
+        assertNotEquals(deckA, deck2A, "shuffleDeck failure: deck not shuffled");
     }
 
     @Test
@@ -36,7 +36,7 @@ public class DeckTest {
         playerList.addToPlayerList(player);
         Deck.dealCards(deck, playerList);
         for(Player p : playerList.getPlayerList()) {
-            assertEquals(2, p.getHand().size(), "incorrect hand size");
+            assertEquals(2, p.getHand().size(), "dealCards failure: incorrect hand size");
         }
 
     }
