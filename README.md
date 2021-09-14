@@ -49,7 +49,7 @@ This creates the standard React Service
 
 Jira is being used for Kanban Board to visualise the work to be done:
 
-![alt text](https://github.com/TSI-Koby/BlackjackProject/blob/main/READMEFiles/JiraKanbanBoard.ppp)
+![alt text](https://github.com/TSI-Koby/BlackjackProject/blob/main/READMEFiles/JiraKanbanBoard.png)
 
 ### React Server Setup
 
