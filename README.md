@@ -91,19 +91,16 @@ This should run the server for Spring Boot getting accessed by localhost:8080
 GitHub is used as a version control system. It currently only
 contains a main branch.
 
-<!---
-INSERT GITHUB GRAPHIC HERE
--->
+![alt text](https://github.com/TSI-Koby/BlackjackProject/blob/main/READMEFiles/Github.png)
 
 ### Jenkins
-<!---
-I know nothing about Jenkins
--->
+
+![alt text]https://github.com/TSI-Koby/BlackjackProject/blob/main/READMEFiles/Jenkins.png
 
 ## Testing
-<!---
-Insert testing section
--->
+
+Some Unit testing is performed here
+![alt text](https://github.com/TSI-Koby/BlackjackProject/blob/main/READMEFiles/Blackjack%20UnitTesting.xlsx)
 
 ## Future Improvement
 <!---
