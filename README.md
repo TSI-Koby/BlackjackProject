@@ -6,11 +6,10 @@ Blackjack project with CI pipeline and testing
 ## Summary
 This project focuses on creating a web application of Black Jack using Spring boot. React is used for the presentation layer of this project.The project uses 312 cards(6 decks) and random card is picked.
 
-## Content
+## Contents
 
 * [Intro](#Blackjack-Project)
 * [Architecture](#Architecture)
-  * [Microservice Architecture](#Microservice-Architecture)
   * [SpringBoot Setup](#SpringBoot-Setup)
   * [React Setup](#React-Setup)
 * [Development Environment](#Development-Environment)
@@ -23,8 +22,6 @@ This project focuses on creating a web application of Black Jack using Spring bo
 * [Future Improvement](#Future-Improvement)
 
 ## Architecture
-
-### Microservice Architecture
 
 ### SpringBoot Setup
 
@@ -40,13 +37,13 @@ npm create-react-app BlackjackAppReact
 
 This creates the standard React Service
 
-### Development Environment
+## Development Environment
 
-## Kanban Board
+### Kanban Board
 
 Jira is being used for Kanban Board to visualise the work to be done:
 
-## React Server Setup
+### React Server Setup
 
 * Open command prompt
 * Navigate to the project folder
@@ -54,7 +51,7 @@ Jira is being used for Kanban Board to visualise the work to be done:
  
 This should run the server for React App getting accessed by localhost:3000
 
-## Spring Boot Server Setup
+### Spring Boot Server Setup
 
 * Open command prompt
 * Navigate to the project folder
@@ -78,9 +75,6 @@ This should run the server for Spring Boot getting accessed by localhost:8080
 * Jira – Kanban Board of choice
 * Jacoco 0.8.7 for measuring code coverage in a codebase through visual reports
 
-
-
-### Kanban Board
 
 ## CI Pipeline
 
