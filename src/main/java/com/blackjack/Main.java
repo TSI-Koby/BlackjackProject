@@ -1,4 +1,4 @@
 package com.blackjack;
 
-public class main {
+public class Main {
 }
