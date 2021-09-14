@@ -95,7 +95,7 @@ contains a main branch.
 
 ### Jenkins
 
-![alt text]https://github.com/TSI-Koby/BlackjackProject/blob/main/READMEFiles/Jenkins.png
+![alt text](https://github.com/TSI-Koby/BlackjackProject/blob/main/READMEFiles/Jenkins.png)
 
 ## Testing
 
