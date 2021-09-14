@@ -15,4 +15,11 @@ public class DeckTest {
         assertEquals(52, deck.size(), "createDeck incorrect size");
         assertNotNull(deck.peek(), "createDeck failure: deck empty");
     }
+
+    @Test
+    @DisplayName("shuffleDeck test")
+    void shuffleDeck() {
+        Stack<Card> deck = Deck.createDeck();
+        assertNotEquals(deck, Deck.shuffleDeck(deck),"shuffleDeck failure: deck not shuffled");
+    }
 }

@@ -1,5 +1,6 @@
 package com.blackjack;
 import java.util.Stack;
+import java.util.Collections;
 
 public class Deck {
 
@@ -77,6 +78,11 @@ public class Deck {
             }
             deck.push(card);
         }
-    return(deck);
+    return deck;
+    }
+
+    public static Stack<Card> shuffleDeck(Stack<Card> deck) {
+        Collections.shuffle(deck);
+        return deck;
     }
 }
