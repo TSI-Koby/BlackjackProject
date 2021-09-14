@@ -1,4 +1,5 @@
 package com.blackjack;
+import java.util.ArrayList;
 import java.util.Stack;
 import java.util.Collections;
 
@@ -83,5 +84,11 @@ public class Deck {
 
     public static void shuffleDeck(Stack<Card> deck) {
         Collections.shuffle(deck);
+    }
+    public static void dealCards(Stack<Card> deck, PlayerList playerList) {
+        for(Player p: playerList.getPlayerList()) {
+            p.addToHand(deck.pop());
+            p.addToHand(deck.pop());
+        }
     }
 }

@@ -26,4 +26,18 @@ public class DeckTest {
         Object[] deck2A = deckShuffled.toArray();
         assertNotEquals(deckA, deck2A, "still broken bozo");
     }
+
+    @Test
+    @DisplayName("dealCards test")
+    void dealCards() {
+        Stack<Card> deck = Deck.createDeck();
+        Player player = new Player();
+        PlayerList playerList = new PlayerList();
+        playerList.addToPlayerList(player);
+        Deck.dealCards(deck, playerList);
+        for(Player p : playerList.getPlayerList()) {
+            assertEquals(2, p.getHand().size(), "incorrect hand size");
+        }
+
+    }
 }
