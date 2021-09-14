@@ -93,9 +93,17 @@ contains a main branch.
 
 ![alt text](https://github.com/TSI-Koby/BlackjackProject/blob/main/READMEFiles/Github.png)
 
-### Jenkins
+### Jenkins Dashboard
 
 ![alt text](https://github.com/TSI-Koby/BlackjackProject/blob/main/READMEFiles/Jenkins.png)
+
+### Jenkins Build Run
+
+![alt text](https://github.com/TSI-Koby/BlackjackProject/blob/main/READMEFiles/JenkinsBuild.png)
+
+### Jenkins Test Results
+
+![alt text](https://github.com/TSI-Koby/BlackjackProject/blob/main/READMEFiles/JenkinsTestResults.png)
 
 ## Testing
 
