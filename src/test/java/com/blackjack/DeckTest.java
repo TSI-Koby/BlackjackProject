@@ -20,6 +20,9 @@ public class DeckTest {
     @DisplayName("shuffleDeck test")
     void shuffleDeck() {
         Stack<Card> deck = Deck.createDeck();
-        assertNotEquals(deck, Deck.shuffleDeck(deck),"shuffleDeck failure: deck not shuffled");
+        Stack<Card> deck2 = Deck.shuffleDeck(deck);
+        Object[] deckA = deck.toArray();
+        Object[] deck2A = deck2.toArray();
+        assertNotEquals(deckA, deck2A, "still broken bozo");
     }
 }
