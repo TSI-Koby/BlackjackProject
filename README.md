@@ -46,6 +46,10 @@ This creates the standard React Service
 
 Jira is being used for Kanban Board to visualise the work to be done:
 
+<!---
+INSERT KANBAN BOARD IMAGE
+-->
+
 ### React Server Setup
 
 * Open command prompt
