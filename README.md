@@ -4,7 +4,10 @@ Authors: Toby Whitehead, Komal Komal
 Blackjack project with CI pipeline and testing
 
 ## Summary
-This project focuses on creating a web application of Black Jack using Spring boot. React is used for the presentation layer of this project.The project uses 312 cards(6 decks) and random card is picked.
+
+This project focuses on creating a web application of Black Jack 
+using Spring boot. React is used for the presentation layer of this 
+project.
 
 ## Contents
 
