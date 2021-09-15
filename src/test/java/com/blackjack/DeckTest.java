@@ -38,6 +38,21 @@ public class DeckTest {
         for(Player p : playerList.getPlayerList()) {
             assertEquals(2, p.getHand().size(), "dealCards failure: incorrect hand size");
         }
+    }
 
+    @Test
+    @DisplayName("reclaimCards test")
+    void reclaimCards() {
+        Stack<Card> deck = Deck.createDeck();
+        Player player = new Player();
+        PlayerList playerList = new PlayerList();
+        playerList.addToPlayerList(player);
+        Deck.dealCards(deck, playerList);
+        Deck.reclaimCards(playerList, deck);
+        for(Player p : playerList.getPlayerList()) {
+            assertEquals(0, p.getHand().size(), "reclaimCards test failure: expected 0, actual: " +
+                    p.getHand().size());
+        }
+        assertEquals(52, deck.size(), "reclaimCards test failure: expected 52, actual: " + deck.size());
     }
 }
