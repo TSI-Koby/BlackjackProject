@@ -58,4 +58,22 @@ public class PlayerTest {
         Player.updateHandTotal(player);
         assertTrue(player.getBustStatus());
     }
+
+    @Test
+    @DisplayName("dealerRules test")
+    void dealerRules() {
+        Player dealer = new Player();
+        Stack<Card> deck = Deck.createDeck();
+        Card card1 = new Card();
+        card1.setCardValue(5);
+        Card card2 = new Card();
+        card2.setCardValue(7);
+        dealer.addToHand(card1);
+        dealer.addToHand(card2);
+        Player.updateHandTotal(dealer);
+        Player.dealerRules(dealer, deck);
+        assertTrue(dealer.getHand().size() > 2, "dealerRules test failure: expected size > 2," +
+                " actual size: " + dealer.getHand().size());
+        assertTrue(dealer.getStandStatus(), "dealerRules test failure: dealer not standing");
+    }
 }

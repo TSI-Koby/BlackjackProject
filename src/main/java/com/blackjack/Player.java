@@ -55,4 +55,12 @@ public class Player {
         if(tempHandTotal > 21)
             player.setBustStatus(true);
     }
+
+    public static void dealerRules(Player player, Stack<Card> deck) {
+        while (player.getHandTotal() < 17) {
+            hitMe(player, deck);
+            updateHandTotal(player);
+        }
+        player.setStandStatus(true);
+    }
 }
