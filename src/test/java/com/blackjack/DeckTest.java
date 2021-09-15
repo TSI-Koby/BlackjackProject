@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.Stack;
 
 
-public class DeckTest {
+class DeckTest {
 
     @Test
     @DisplayName("createDeck test")
@@ -32,10 +32,10 @@ public class DeckTest {
     void dealCards() {
         Stack<Card> deck = Deck.createDeck();
         Player player = new Player();
-        PlayerList playerList = new PlayerList();
-        playerList.addToPlayerList(player);
-        Deck.dealCards(deck, playerList);
-        for(Player p : playerList.getPlayerList()) {
+        PlayerList players = new PlayerList();
+        players.addToPlayerList(player);
+        Deck.dealCards(deck, players);
+        for(Player p : players.getCurrentPlayers()) {
             assertEquals(2, p.getHand().size(), "dealCards failure: incorrect hand size");
         }
     }
@@ -45,11 +45,11 @@ public class DeckTest {
     void reclaimCards() {
         Stack<Card> deck = Deck.createDeck();
         Player player = new Player();
-        PlayerList playerList = new PlayerList();
-        playerList.addToPlayerList(player);
-        Deck.dealCards(deck, playerList);
-        Deck.reclaimCards(playerList, deck);
-        for(Player p : playerList.getPlayerList()) {
+        PlayerList players = new PlayerList();
+        players.addToPlayerList(player);
+        Deck.dealCards(deck, players);
+        Deck.reclaimCards(players, deck);
+        for(Player p : players.getCurrentPlayers()) {
             assertEquals(0, p.getHand().size(), "reclaimCards test failure: expected 0, actual: " +
                     p.getHand().size());
         }

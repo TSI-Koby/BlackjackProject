@@ -5,6 +5,8 @@ import java.util.ArrayList;
 
 public class Deck {
 
+    private Deck(){}
+
     public static Stack<Card> createDeck() {
         Stack<Card> deck = new Stack<>();
         String[] suits = new String[]{"hearts", "diamonds", "clubs", "spades"};
@@ -39,14 +41,14 @@ public class Deck {
     }
 
     public static void dealCards(Stack<Card> deck, PlayerList playerList) {
-        for(Player p: playerList.getPlayerList()) {
+        for(Player p: playerList.getCurrentPlayers()) {
             p.addToHand(deck.pop());
             p.addToHand(deck.pop());
         }
     }
 
     public static void reclaimCards(PlayerList playerList, Stack<Card> deck) {
-        for(Player p : playerList.getPlayerList()) {
+        for(Player p : playerList.getCurrentPlayers()) {
             for(Card c : p.getHand()) {
                 deck.push(c);
             }

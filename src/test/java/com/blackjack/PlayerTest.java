@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Stack;
 
-public class PlayerTest {
+class PlayerTest {
 
     @Test
     @DisplayName("hitMe test")
