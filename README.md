@@ -59,7 +59,7 @@ Jira is being used for Kanban Board to visualise the work to be done:
 
 <br/>
 
-![alt text](https://github.com/TSI-Koby/BlackjackProject/blob/main/READMEFiles/JiraKanbanBoard.PNG)
+![alt text](./READMEFiles/JiraKanbanBoard.PNG)
 
 <br/>
 
@@ -147,9 +147,10 @@ Some Unit testing is performed here
 
 ### References
 
-References taken from 
+References taken from:
 
-[https://github.com/GarethDavisDWG/ReactDemo](https://github.com/GarethDavisDWG/ReactDemo)<br/>
+[https://github.com/GarethDavisDWG/ReactDemo](https://github.com/GarethDavisDWG/ReactDemo)
+
 [https://github.com/HiredMark/OneCleverHorseo](https://github.com/HiredMark/OneCleverHorseo)
 
 <br/>
