@@ -25,15 +25,19 @@ project.
 * [Future Improvement](#Future-Improvement)
 
 ## Architecture
+<br/>
 
-![alt text](https://github.com/TSI-Koby/BlackjackProject/blob/main/READMEFiles/Architecture.jpg)
+![alt text](./READMEFiles/Architecture.jpg)
 
+<br/>
 
 ### SpringBoot Setup
 
 * Go to https://start.spring.io/
 * Name the Artifact and give it a suitable name
 * Generate the Folder
+
+<br/>
 
 ### React Setup
 
@@ -43,13 +47,21 @@ npm create-react-app BlackjackAppReact
 
 This creates the standard React Service
 
+<br/>
+
 ## Development Environment
+
+<br/>
 
 ### Kanban Board
 
 Jira is being used for Kanban Board to visualise the work to be done:
 
-![alt text](https://github.com/TSI-Koby/BlackjackProject/blob/main/READMEFiles/JiraKanbanBoard.png)
+<br/>
+
+![alt text](./READMEFiles/JiraKanbanBoard.png)
+
+<br/>
 
 ### React Server Setup
 
@@ -59,6 +71,8 @@ Jira is being used for Kanban Board to visualise the work to be done:
  
 This should run the server for React App getting accessed by localhost:3000
 
+<br/>
+
 ### Spring Boot Server Setup
 
 * Open command prompt
@@ -66,6 +80,8 @@ This should run the server for React App getting accessed by localhost:3000
 * Run the following code: mvn spring-boot: run
   
 This should run the server for Spring Boot getting accessed by localhost:8080
+
+<br/>
 
 ### Tools
 
@@ -83,32 +99,51 @@ This should run the server for Spring Boot getting accessed by localhost:8080
 * Jira – Kanban Board of choice
 * Jacoco 0.8.7 for measuring code coverage in a codebase through visual reports
 
+<br/>
 
 ## CI Pipeline
+
+<br/>
 
 ### GitHub
 
 GitHub is used as a version control system. It currently only
 contains a main branch.
 
-![alt text](https://github.com/TSI-Koby/BlackjackProject/blob/main/READMEFiles/Github.png)
+<br/>
 
-### Jenkins Dashboard
+![alt text](./READMEFiles/Github.png)
 
-![alt text](https://github.com/TSI-Koby/BlackjackProject/blob/main/READMEFiles/Jenkins.png)
+<br/>
 
-### Jenkins Build Run
+### Jenkins
 
-![alt text](https://github.com/TSI-Koby/BlackjackProject/blob/main/READMEFiles/JenkinsBuild.png)
+<br/>
 
-### Jenkins Test Results
+#### Jenkins Dashboard
 
-![alt text](https://github.com/TSI-Koby/BlackjackProject/blob/main/READMEFiles/JenkinsTestResults.png)
+![alt text](./READMEFiles/Jenkins.png)
 
-## Testing
+<br/>
+
+#### Jenkins Build Run
+
+![alt text](./READMEFiles/JenkinsBuild.png)
+
+<br/>
+
+#### Jenkins Test Results
+
+![alt text](./READMEFiles/JenkinsTestResults.png)
+
+<br/>
+
+### Testing
 
 Some Unit testing is performed here
-![alt text](https://github.com/TSI-Koby/BlackjackProject/blob/main/READMEFiles/Blackjack%20UnitTesting.xlsx)
+![alt text](./READMEFiles/BlackjackUnitTesting.xlsx)
+
+<br/>
 
 ## Future Improvement
 <!---
