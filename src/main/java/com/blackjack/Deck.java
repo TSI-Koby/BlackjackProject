@@ -1,4 +1,5 @@
 package com.blackjack;
+import java.util.List;
 import java.util.Stack;
 import java.util.Collections;
 import java.util.ArrayList;
@@ -52,7 +53,7 @@ public class Deck {
             for(Card c : p.getHand()) {
                 deck.push(c);
             }
-            ArrayList<Card> hand = new ArrayList<>();
+            List<Card> hand = new ArrayList<>();
             p.setHand(hand);
         }
     }

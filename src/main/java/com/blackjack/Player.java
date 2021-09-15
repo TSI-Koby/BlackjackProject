@@ -1,18 +1,19 @@
 package com.blackjack;
 import java.util.ArrayList;
 import java.util.Stack;
+import java.util.List;
 
 public class Player {
 
-    private ArrayList<Card> hand = new ArrayList<>();
+    private List<Card> hand = new ArrayList<>();
     private boolean standStatus = false;
     private int handTotal = 0;
     private boolean bustStatus = false;
 
-    public ArrayList<Card> getHand() {
+    public List<Card> getHand() {
         return hand;
     }
-    public void setHand(ArrayList<Card> hand) {
+    public void setHand(List<Card> hand) {
         this.hand = hand;
     }
     public void addToHand(Card card) {

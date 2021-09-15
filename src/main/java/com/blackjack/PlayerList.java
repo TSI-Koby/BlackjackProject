@@ -1,13 +1,14 @@
 package com.blackjack;
 import java.util.ArrayList;
+import java.util.List;
 
 public class PlayerList {
-    private ArrayList<Player> currentPlayers = new ArrayList<>();
+    private List<Player> currentPlayers = new ArrayList<>();
 
-    public ArrayList<Player> getCurrentPlayers() {
+    public List<Player> getCurrentPlayers() {
         return currentPlayers;
     }
-    public void setCurrentPlayers(ArrayList<Player> currentPlayers) {
+    public void setCurrentPlayers(List<Player> currentPlayers) {
         this.currentPlayers = currentPlayers;
     }
     public void addToPlayerList(Player player) {
