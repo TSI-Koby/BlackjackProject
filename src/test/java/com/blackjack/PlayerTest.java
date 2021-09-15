@@ -89,4 +89,17 @@ public class PlayerTest {
         player.addToHand(card2);
         assertTrue(Player.blackjackCheck(player), "blackjackCheck test failure: blackjack not identified");
     }
+
+    @Test
+    @DisplayName("displayHand test")
+    void displayHand() {
+        Player player = new Player();
+        Card card1 = new Card();
+        card1.setCardValue(5);
+        card1.setCardSuit("hearts");
+        card1.setFaceCard(false);
+        player.addToHand(card1);
+        assertEquals("[5♥] ", Player.displayHand(player), "displayHand test failure: expected [5♥] ," +
+                " actual: " + Player.displayHand(player));
+    }
 }

@@ -69,4 +69,34 @@ public class Player {
         Card card2 = player.getHand().get(1);
         return (card1.isFaceCard() && card2.getCardValue() == 1) || (card2.isFaceCard() && card1.getCardValue() == 1);
     }
+
+    public static String displayHand(Player player) {
+        StringBuilder stringBuilder = new StringBuilder();
+        for(Card c : player.getHand()) {
+            String suit;
+            switch(c.getCardSuit()) {
+                case "hearts":
+                    suit = "♥";
+                    break;
+                case "diamonds":
+                    suit = "♦";
+                    break;
+                case "clubs":
+                    suit = "♣";
+                    break;
+                case "spades":
+                    suit = "♠";
+                    break;
+                default:
+                    throw new IllegalStateException("Unexpected value: " + c.getCardSuit());
+            }
+            if(c.isFaceCard()) {
+                stringBuilder.append("[").append(c.getFaceCardType()).append(suit).append("] ");
+            }
+            else {
+                stringBuilder.append("[").append(c.getCardValue()).append(suit).append("] ");
+            }
+        }
+        return stringBuilder.toString();
+    }
 }
