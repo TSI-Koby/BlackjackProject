@@ -59,7 +59,7 @@ Jira is being used for Kanban Board to visualise the work to be done:
 
 <br/>
 
-![alt text](./READMEFiles/JiraKanbanBoard.png)
+![alt text](https://github.com/TSI-Koby/BlackjackProject/blob/main/READMEFiles/JiraKanbanBoard.PNG)
 
 <br/>
 
