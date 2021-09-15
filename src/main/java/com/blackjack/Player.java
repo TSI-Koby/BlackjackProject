@@ -52,5 +52,7 @@ public class Player {
             tempHandTotal += value;
         }
         player.setHandTotal(tempHandTotal);
+        if(tempHandTotal > 21)
+            player.setBustStatus(true);
     }
 }

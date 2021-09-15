@@ -41,4 +41,21 @@ public class PlayerTest {
         assertEquals(12, player.getHandTotal(),
                 "updateHandTotal failure: expected: 12, actual: " + player.getHandTotal());
     }
+
+    @Test
+    @DisplayName("bustStatus test")
+    void updateBustStatus() {
+        Player player = new Player();
+        Card card1 = new Card();
+        card1.setCardValue(5);
+        Card card2 = new Card();
+        card2.setCardValue(7);
+        Card card3 = new Card();
+        card3.setCardValue(10);
+        player.addToHand(card1);
+        player.addToHand(card2);
+        player.addToHand(card3);
+        Player.updateHandTotal(player);
+        assertTrue(player.getBustStatus());
+    }
 }

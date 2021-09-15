@@ -15,12 +15,15 @@ public class Deck {
             }
             if(i == 11) {
                 card.setFaceCardType("jack");
+                card.setCardValue(10);
             }
             if(i == 12) {
                 card.setFaceCardType("queen");
+                card.setCardValue(10);
             }
             if(i == 13) {
                 card.setFaceCardType("king");
+                card.setCardValue(10);
             }
             deck.push(card);
         }
@@ -33,12 +36,15 @@ public class Deck {
             }
             if(i == 11) {
                 card.setFaceCardType("jack");
+                card.setCardValue(10);
             }
             if(i == 12) {
                 card.setFaceCardType("queen");
+                card.setCardValue(10);
             }
             if(i == 13) {
                 card.setFaceCardType("king");
+                card.setCardValue(10);
             }
             deck.push(card);
         }
@@ -51,12 +57,15 @@ public class Deck {
             }
             if(i == 11) {
                 card.setFaceCardType("jack");
+                card.setCardValue(10);
             }
             if(i == 12) {
                 card.setFaceCardType("queen");
+                card.setCardValue(10);
             }
             if(i == 13) {
                 card.setFaceCardType("king");
+                card.setCardValue(10);
             }
             deck.push(card);
         }
@@ -69,12 +78,15 @@ public class Deck {
             }
             if(i == 11) {
                 card.setFaceCardType("jack");
+                card.setCardValue(10);
             }
             if(i == 12) {
                 card.setFaceCardType("queen");
+                card.setCardValue(10);
             }
             if(i == 13) {
                 card.setFaceCardType("king");
+                card.setCardValue(10);
             }
             deck.push(card);
         }
