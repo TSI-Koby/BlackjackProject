@@ -63,4 +63,10 @@ public class Player {
         }
         player.setStandStatus(true);
     }
+
+    public static boolean blackjackCheck(Player player) {
+        Card card1 = player.getHand().get(0);
+        Card card2 = player.getHand().get(1);
+        return (card1.isFaceCard() && card2.getCardValue() == 1) || (card2.isFaceCard() && card1.getCardValue() == 1);
+    }
 }

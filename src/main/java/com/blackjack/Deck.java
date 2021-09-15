@@ -6,89 +6,29 @@ public class Deck {
 
     public static Stack<Card> createDeck() {
         Stack<Card> deck = new Stack<>();
-        for(int i = 1; i < 14; i++){
-            Card card = new Card();
-            card.setCardSuit("hearts");
-            card.setCardValue(i);
-            if(i > 10) {
-                card.setFaceCard(true);
+        String[] suits = new String[]{"hearts", "diamonds", "clubs", "spades"};
+        for(String s : suits) {
+            for (int i = 1; i < 14; i++) {
+                Card card = new Card();
+                card.setCardSuit(s);
+                card.setCardValue(i);
+                if (i > 10) {
+                    card.setFaceCard(true);
+                }
+                if (i == 11) {
+                    card.setFaceCardType("jack");
+                    card.setCardValue(10);
+                }
+                if (i == 12) {
+                    card.setFaceCardType("queen");
+                    card.setCardValue(10);
+                }
+                if (i == 13) {
+                    card.setFaceCardType("king");
+                    card.setCardValue(10);
+                }
+                deck.push(card);
             }
-            if(i == 11) {
-                card.setFaceCardType("jack");
-                card.setCardValue(10);
-            }
-            if(i == 12) {
-                card.setFaceCardType("queen");
-                card.setCardValue(10);
-            }
-            if(i == 13) {
-                card.setFaceCardType("king");
-                card.setCardValue(10);
-            }
-            deck.push(card);
-        }
-        for(int i = 1; i < 14; i++){
-            Card card = new Card();
-            card.setCardSuit("diamonds");
-            card.setCardValue(i);
-            if(i > 10) {
-                card.setFaceCard(true);
-            }
-            if(i == 11) {
-                card.setFaceCardType("jack");
-                card.setCardValue(10);
-            }
-            if(i == 12) {
-                card.setFaceCardType("queen");
-                card.setCardValue(10);
-            }
-            if(i == 13) {
-                card.setFaceCardType("king");
-                card.setCardValue(10);
-            }
-            deck.push(card);
-        }
-        for(int i = 1; i < 14; i++){
-            Card card = new Card();
-            card.setCardSuit("clubs");
-            card.setCardValue(i);
-            if(i > 10) {
-                card.setFaceCard(true);
-            }
-            if(i == 11) {
-                card.setFaceCardType("jack");
-                card.setCardValue(10);
-            }
-            if(i == 12) {
-                card.setFaceCardType("queen");
-                card.setCardValue(10);
-            }
-            if(i == 13) {
-                card.setFaceCardType("king");
-                card.setCardValue(10);
-            }
-            deck.push(card);
-        }
-        for(int i = 1; i < 14; i++){
-            Card card = new Card();
-            card.setCardSuit("spades");
-            card.setCardValue(i);
-            if(i > 10) {
-                card.setFaceCard(true);
-            }
-            if(i == 11) {
-                card.setFaceCardType("jack");
-                card.setCardValue(10);
-            }
-            if(i == 12) {
-                card.setFaceCardType("queen");
-                card.setCardValue(10);
-            }
-            if(i == 13) {
-                card.setFaceCardType("king");
-                card.setCardValue(10);
-            }
-            deck.push(card);
         }
     return deck;
     }

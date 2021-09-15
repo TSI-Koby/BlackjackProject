@@ -76,4 +76,17 @@ public class PlayerTest {
                 " actual size: " + dealer.getHand().size());
         assertTrue(dealer.getStandStatus(), "dealerRules test failure: dealer not standing");
     }
+
+    @Test
+    @DisplayName("blackjackCheck test")
+    void blackjackCheck() {
+        Player player = new Player();
+        Card card1 = new Card();
+        card1.setCardValue(1);
+        Card card2 = new Card();
+        card2.setFaceCard(true);
+        player.addToHand(card1);
+        player.addToHand(card2);
+        assertTrue(Player.blackjackCheck(player), "blackjackCheck test failure: blackjack not identified");
+    }
 }
