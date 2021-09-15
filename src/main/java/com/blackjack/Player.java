@@ -6,6 +6,8 @@ public class Player {
 
     private ArrayList<Card> hand = new ArrayList<>();
     private boolean standStatus = false;
+    private int handTotal = 0;
+    private boolean bustStatus = false;
 
     public ArrayList<Card> getHand() {
         return hand;
@@ -22,6 +24,18 @@ public class Player {
     public void setStandStatus(boolean standStatus) {
         this.standStatus = standStatus;
     }
+    public int getHandTotal() {
+        return handTotal;
+    }
+    public void setHandTotal(int handTotal) {
+        this.handTotal = handTotal;
+    }
+    public boolean getBustStatus() {
+        return bustStatus;
+    }
+    public void setBustStatus(boolean bustStatus) {
+        this.bustStatus = bustStatus;
+    }
 
     public static void hitMe(Player player, Stack<Card> deck) {
         player.addToHand(deck.pop());
@@ -29,5 +43,14 @@ public class Player {
 
     public static void standMe(Player player) {
         player.setStandStatus(true);
+    }
+
+    public static void updateHandTotal(Player player) {
+        int tempHandTotal = 0;
+        for(Card c : player.getHand()) {
+            int value = c.getCardValue();
+            tempHandTotal += value;
+        }
+        player.setHandTotal(tempHandTotal);
     }
 }

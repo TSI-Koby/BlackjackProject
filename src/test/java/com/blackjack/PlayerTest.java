@@ -26,4 +26,19 @@ public class PlayerTest {
         Player.standMe(player);
         assertTrue(player.getStandStatus(), "standStatus test failure: incorrect standStatus");
     }
+
+    @Test
+    @DisplayName("updateHandTotal test")
+    void updateHandTotal() {
+        Player player = new Player();
+        Card card1 = new Card();
+        card1.setCardValue(5);
+        Card card2 = new Card();
+        card2.setCardValue(7);
+        player.addToHand(card1);
+        player.addToHand(card2);
+        Player.updateHandTotal(player);
+        assertEquals(12, player.getHandTotal(),
+                "updateHandTotal failure: expected: 12, actual: " + player.getHandTotal());
+    }
 }
