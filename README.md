@@ -147,7 +147,7 @@ Some Unit testing is performed here
 
 ### References
 
-We took References from 
+References taken from 
 
 [https://github.com/GarethDavisDWG/ReactDemo](https://github.com/GarethDavisDWG/ReactDemo)<br/>
 [https://github.com/HiredMark/OneCleverHorseo](https://github.com/HiredMark/OneCleverHorseo)
