@@ -31,7 +31,7 @@ class DeckTest {
     @DisplayName("dealCards test")
     void dealCards() {
         Deck deck = new Deck(1);
-        Player player = new Player();
+        Player player = new Player("Geoff");
         PlayerList players = new PlayerList();
         players.addToPlayerList(player);
         Deck.dealCards(deck, players);
@@ -45,7 +45,7 @@ class DeckTest {
     @DisplayName("reclaimCards test")
     void reclaimCards() {
         Deck deck = new Deck(1);
-        Player player = new Player();
+        Player player = new Player("Geoff");
         PlayerList players = new PlayerList();
         players.addToPlayerList(player);
         Deck.dealCards(deck, players);

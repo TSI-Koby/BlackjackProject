@@ -11,6 +11,10 @@ public class Player {
     private boolean bustStatus = false;
     private String name;
 
+    public Player(String name) {
+        this.name = name;
+    }
+
     public List<Card> getHand() {
         return hand;
     }

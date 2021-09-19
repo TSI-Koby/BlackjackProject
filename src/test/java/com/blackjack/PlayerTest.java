@@ -10,7 +10,7 @@ class PlayerTest {
     @Test
     @DisplayName("hitMe test")
     void hitMe() {
-        Player player = new Player();
+        Player player = new Player("Geoff");
         Deck deck = new Deck(1);
         int handSizeBefore = player.getHand().size();
         Player.hitMe(deck, player);
@@ -21,7 +21,7 @@ class PlayerTest {
     @Test
     @DisplayName("standStatus test")
     void standMe() {
-        Player player = new Player();
+        Player player = new Player("Geoff");
         Player.standMe(player);
         assertTrue(player.getStandStatus(), "standStatus test failure: incorrect standStatus");
     }
@@ -29,7 +29,7 @@ class PlayerTest {
     @Test
     @DisplayName("updateHandTotal test")
     void updateHandTotal() {
-        Player player = new Player();
+        Player player = new Player("Geoff");
         Card card1 = new Card();
         card1.setCardValue(5);
         Card card2 = new Card();
@@ -44,7 +44,7 @@ class PlayerTest {
     @Test
     @DisplayName("bustStatus test")
     void updateBustStatus() {
-        Player player = new Player();
+        Player player = new Player("Geoff");
         Card card1 = new Card();
         card1.setCardValue(5);
         Card card2 = new Card();
@@ -61,7 +61,7 @@ class PlayerTest {
     @Test
     @DisplayName("dealerRules test")
     void dealerRules() {
-        Player dealer = new Player();
+        Player dealer = new Player("Geoff");
         Deck deck = new Deck(1);
         Card card1 = new Card();
         card1.setCardValue(5);
@@ -79,7 +79,7 @@ class PlayerTest {
     @Test
     @DisplayName("blackjackCheck test")
     void blackjackCheck() {
-        Player player = new Player();
+        Player player = new Player("Geoff");
         Card card1 = new Card();
         card1.setCardValue(1);
         Card card2 = new Card();
@@ -92,7 +92,7 @@ class PlayerTest {
     @Test
     @DisplayName("displayHand test")
     void displayHand() {
-        Player player = new Player();
+        Player player = new Player("Geoff");
         Card card1 = new Card();
         card1.setCardValue(5);
         card1.setCardSuit("hearts");
