@@ -36,7 +36,8 @@ class DeckTest {
         players.addToPlayerList(player);
         Deck.dealCards(deck, players);
         for(Player p : players.getCurrentPlayers()) {
-            assertEquals(2, p.getHand().size(), "dealCards failure: incorrect hand size");
+            assertEquals(2, p.getHand().size(), "dealCards failure: expected: 2, actual: "
+                    + p.getHand().size());
         }
     }
 
