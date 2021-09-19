@@ -32,20 +32,24 @@ public class Deck {
                     Card card = new Card();
                     card.setCardSuit(s);
                     card.setCardValue(i);
-                    if (i > 10) {
-                        card.setFaceCard(true);
-                    }
-                    if (i == 11) {
-                        card.setFaceCardType("jack");
-                        card.setCardValue(10);
-                    }
-                    if (i == 12) {
-                        card.setFaceCardType("queen");
-                        card.setCardValue(10);
-                    }
-                    if (i == 13) {
-                        card.setFaceCardType("king");
-                        card.setCardValue(10);
+                    switch (i) {
+                        case 11:
+                            card.setFaceCardType("jack");
+                            card.setCardValue(10);
+                            card.setFaceCard(true);
+                            break;
+                        case 12:
+                            card.setFaceCardType("queen");
+                            card.setCardValue(10);
+                            card.setFaceCard(true);
+                            break;
+                        case 13:
+                            card.setFaceCardType("king");
+                            card.setCardValue(10);
+                            card.setFaceCard(true);
+                            break;
+                        default:
+                            break;
                     }
                     deck.push(card);
                 }
