@@ -9,6 +9,7 @@ public class Player {
     private boolean standStatus = false;
     private int handTotal = 0;
     private boolean bustStatus = false;
+    private String name;
 
     public List<Card> getHand() {
         return hand;
@@ -37,9 +38,17 @@ public class Player {
     public void setBustStatus(boolean bustStatus) {
         this.bustStatus = bustStatus;
     }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-    public static void hitMe(Player player, Stack<Card> deck) {
-        player.addToHand(deck.pop());
+    public static void hitMe(Deck deck, Player player) {
+        Stack<Card> tempDeck = deck.getDeckContents();
+        player.addToHand(tempDeck.pop());
+        deck.setDeckContents(tempDeck);
     }
 
     public static void standMe(Player player) {
@@ -57,9 +66,9 @@ public class Player {
             player.setBustStatus(true);
     }
 
-    public static void dealerRules(Player player, Stack<Card> deck) {
+    public static void dealerRules(Deck deck, Player player) {
         while (player.getHandTotal() < 17) {
-            hitMe(player, deck);
+            hitMe(deck, player);
             updateHandTotal(player);
         }
         player.setStandStatus(true);

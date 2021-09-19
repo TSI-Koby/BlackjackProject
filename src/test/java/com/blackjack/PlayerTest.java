@@ -12,9 +12,9 @@ class PlayerTest {
     @DisplayName("hitMe test")
     void hitMe() {
         Player player = new Player();
-        Stack<Card> deck = Deck.createDeck();
+        Deck deck = new Deck(1);
         int handSizeBefore = player.getHand().size();
-        Player.hitMe(player, deck);
+        Player.hitMe(deck, player);
         int handSizeAfter = player.getHand().size();
         assertEquals(handSizeBefore + 1, handSizeAfter, "hitMe test failure, incorrect handSizeAfter");
     }
@@ -63,7 +63,7 @@ class PlayerTest {
     @DisplayName("dealerRules test")
     void dealerRules() {
         Player dealer = new Player();
-        Stack<Card> deck = Deck.createDeck();
+        Deck deck = new Deck(1);
         Card card1 = new Card();
         card1.setCardValue(5);
         Card card2 = new Card();
@@ -71,7 +71,7 @@ class PlayerTest {
         dealer.addToHand(card1);
         dealer.addToHand(card2);
         Player.updateHandTotal(dealer);
-        Player.dealerRules(dealer, deck);
+        Player.dealerRules(deck, dealer);
         assertTrue(dealer.getHand().size() > 2, "dealerRules test failure: expected size > 2," +
                 " actual size: " + dealer.getHand().size());
         assertTrue(dealer.getStandStatus(), "dealerRules test failure: dealer not standing");

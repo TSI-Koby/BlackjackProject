@@ -6,55 +6,79 @@ import java.util.ArrayList;
 
 public class Deck {
 
-    private Deck(){}
+    private Stack<Card> deckContents;
+    private int numberOfDecks;
 
-    public static Stack<Card> createDeck() {
+    public Stack<Card> getDeckContents() {
+        return deckContents;
+    }
+    public void setDeckContents(Stack<Card> deckContents) {
+        this.deckContents = deckContents;
+    }
+    public int getNumberOfDecks() {
+        return numberOfDecks;
+    }
+    public void setNumberOfDecks(int numberOfDecks) {
+        this.numberOfDecks = numberOfDecks;
+    }
+
+    public Deck(int numberOfDecks) {
+        this.numberOfDecks = numberOfDecks;
         Stack<Card> deck = new Stack<>();
         String[] suits = new String[]{"hearts", "diamonds", "clubs", "spades"};
-        for(String s : suits) {
-            for (int i = 1; i < 14; i++) {
-                Card card = new Card();
-                card.setCardSuit(s);
-                card.setCardValue(i);
-                if (i > 10) {
-                    card.setFaceCard(true);
+        for(int j = 0; j < numberOfDecks; j++) {
+            for (String s : suits) {
+                for (int i = 1; i < 14; i++) {
+                    Card card = new Card();
+                    card.setCardSuit(s);
+                    card.setCardValue(i);
+                    if (i > 10) {
+                        card.setFaceCard(true);
+                    }
+                    if (i == 11) {
+                        card.setFaceCardType("jack");
+                        card.setCardValue(10);
+                    }
+                    if (i == 12) {
+                        card.setFaceCardType("queen");
+                        card.setCardValue(10);
+                    }
+                    if (i == 13) {
+                        card.setFaceCardType("king");
+                        card.setCardValue(10);
+                    }
+                    deck.push(card);
                 }
-                if (i == 11) {
-                    card.setFaceCardType("jack");
-                    card.setCardValue(10);
-                }
-                if (i == 12) {
-                    card.setFaceCardType("queen");
-                    card.setCardValue(10);
-                }
-                if (i == 13) {
-                    card.setFaceCardType("king");
-                    card.setCardValue(10);
-                }
-                deck.push(card);
             }
         }
-    return deck;
+        this.deckContents = deck;
     }
 
-    public static void shuffleDeck(Stack<Card> deck) {
-        Collections.shuffle(deck);
+
+    public static void shuffleDeck(Deck deck) {
+        Stack<Card> tempDeck = deck.getDeckContents();
+        Collections.shuffle(tempDeck);
+        deck.setDeckContents(tempDeck);
     }
 
-    public static void dealCards(Stack<Card> deck, PlayerList playerList) {
+    public static void dealCards(Deck deck, PlayerList playerList) {
         for(Player p: playerList.getCurrentPlayers()) {
-            p.addToHand(deck.pop());
-            p.addToHand(deck.pop());
+            Stack<Card> tempDeck = deck.getDeckContents();
+            p.addToHand(tempDeck.pop());
+            p.addToHand(tempDeck.pop());
+            deck.setDeckContents(tempDeck);
         }
     }
 
-    public static void reclaimCards(PlayerList playerList, Stack<Card> deck) {
+    public static void reclaimCards(Deck deck, PlayerList playerList) {
+        Stack<Card> tempDeck = deck.getDeckContents();
         for(Player p : playerList.getCurrentPlayers()) {
             for(Card c : p.getHand()) {
-                deck.push(c);
+                tempDeck.push(c);
             }
             List<Card> hand = new ArrayList<>();
             p.setHand(hand);
         }
+        deck.setDeckContents(tempDeck);
     }
 }
