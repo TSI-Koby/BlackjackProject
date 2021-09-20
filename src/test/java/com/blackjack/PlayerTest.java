@@ -65,15 +65,17 @@ class PlayerTest {
         Deck deck = new Deck(1);
         Card card1 = new Card();
         card1.setCardValue(5);
+        card1.setCardSuit("clubs");
         Card card2 = new Card();
         card2.setCardValue(7);
+        card2.setCardSuit("spades");
         dealer.addToHand(card1);
         dealer.addToHand(card2);
         Player.updateHandTotal(dealer);
         Player.dealerRules(deck, dealer);
         assertTrue(dealer.getHand().size() > 2, "dealerRules test failure: expected size > 2," +
                 " actual size: " + dealer.getHand().size());
-        assertTrue(dealer.getStandStatus(), "dealerRules test failure: dealer not standing");
+        assertTrue(dealer.getStandStatus() || dealer.getBustStatus(), "dealerRules test failure: dealer not standing");
     }
 
     @Test
