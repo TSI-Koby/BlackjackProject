@@ -90,6 +90,7 @@ public class Player {
     }
 
     public static void dealerRules(Deck deck, Player player) {
+        Player.updateHandTotal(player);
         while (player.getHandTotal() < 17 && !player.getBustStatus()) {
             hitMe(deck, player);
         }

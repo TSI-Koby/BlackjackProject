@@ -16,7 +16,7 @@ public class Main {
         System.out.println(Player.dealerCard(dealer));
         System.out.println(player.getName());
         System.out.println(Player.displayHand(player));
-        System.out.println("\n");
+        Player.updateHandTotal(player);
         do {
             int input = Integer.parseInt(takeInput("1 for Hit, 2 for Stand"));
             switch(input) {
@@ -35,8 +35,11 @@ public class Main {
         if(player.getBustStatus()) {
             System.out.println(dealer.getName() + " wins");
         }
+        else if(player.getHandTotal() <= dealer.getHandTotal()) {
+            System.out.println(dealer.getName() + " wins");
+        }
         else {
-            System.out.println("Dealer's turn");
+            System.out.println("\nDealer's turn");
             Player.dealerRules(deck, dealer);
             if(dealer.getBustStatus())
                 System.out.println(player.getName() + " wins");
