@@ -17,6 +17,7 @@ class MainTest {
         public String takeInput(String inputRequest) {
             String string = outputArray[inputCounter];
             inputCounter++;
+            inputCounter = (inputCounter + 1) % (outputArray.length);
             return string;
         }
     }
@@ -37,7 +38,20 @@ class MainTest {
     void playerTurn() {
         dummyMain main = new dummyMain();
         main.initMain();
-        
+        main.setOutputArray(new String[]{"1", "3"});
         main.playerTurn();
+        assertTrue(main.getPlayer().getBustStatus(), "playerTurn incorrect bust status");
+    }
+
+    @Test
+    @DisplayName("dealerTurn test")
+    void dealerTurn() {
+        dummyMain main = new dummyMain();
+        main.initMain();
+        main.setOutputArray(new String[]{"2"});
+        main.playerTurn();
+        main.dealerTurn();
+        assertTrue(main.getDealer().getBustStatus() || main.getDealer().getStandStatus(),
+                "dealerTurn test failure, not bust or standing");
     }
 }

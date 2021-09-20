@@ -12,6 +12,14 @@ public class Main {
         return playerList;
     }
 
+    public Player getPlayer() {
+        return player;
+    }
+
+    public Player getDealer() {
+        return dealer;
+    }
+
 
     public static void main(String[] args) {
         Main main = new Main();
