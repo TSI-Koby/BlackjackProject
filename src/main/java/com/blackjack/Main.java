@@ -3,19 +3,24 @@ import java.util.Scanner;
 
 public class Main {
 
-    private static Deck deck;
-    private static Player player;
-    private static Player dealer;
-    private static PlayerList playerList;
+    private Deck deck;
+    private Player player;
+    private Player dealer;
+    private PlayerList playerList;
+
+    public PlayerList getPlayerList() {
+        return playerList;
+    }
 
 
     public static void main(String[] args) {
-        initMain();
-        playerTurn();
-        dealerTurn();
+        Main main = new Main();
+        main.initMain();
+        main.playerTurn();
+        main.dealerTurn();
     }
 
-    public static void initMain(){
+    public void initMain(){
         playerList = new PlayerList();
         player = new Player("Geoff");
         dealer = new Player("Dealer");
@@ -31,7 +36,7 @@ public class Main {
         Player.updateHandTotal(player);
     }
 
-    public static void playerTurn() {
+    public void playerTurn() {
         do {
             int input = Integer.parseInt(takeInput("1 for Hit, 2 for Stand"));
             switch(input) {
@@ -49,7 +54,7 @@ public class Main {
         while(!player.getBustStatus() && !player.getStandStatus());
     }
 
-    public static void dealerTurn() {
+    public void dealerTurn() {
         if(player.getBustStatus()) {
             System.out.println(dealer.getName() + " wins");
         }
@@ -70,7 +75,7 @@ public class Main {
     }
 
 
-    public static String takeInput(String inputRequest) {
+    public String takeInput(String inputRequest) {
         System.out.println("Enter " + inputRequest + " :");
         Scanner keyboard = new Scanner(System.in);
         return keyboard.nextLine();
