@@ -57,4 +57,12 @@ class DeckTest {
         assertEquals(52, deck.getDeckContents().size(),
                 "reclaimCards test failure: expected 52, actual: " + deck.getDeckContents().size());
     }
+
+    @Test
+    @DisplayName("get/set numberOfDecks test")
+    void SetGetNumberOfDecks() {
+        Deck deck = new Deck(1);
+        deck.setNumberOfDecks(2);
+        assertEquals(2, deck.getNumberOfDecks(), "get/set numberOfDecks failure");
+    }
 }

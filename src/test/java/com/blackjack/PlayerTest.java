@@ -103,4 +103,12 @@ class PlayerTest {
         assertEquals("[5♥] ", Player.displayHand(player), "displayHand test failure: expected [5♥] ," +
                 " actual: " + Player.displayHand(player));
     }
+
+    @Test
+    @DisplayName("get/set name test")
+    void SetGetName() {
+        Player player = new Player("Geoff");
+        player.setName("Tony");
+        assertEquals("Tony", player.getName(), "get/set name test failure");
+    }
 }
