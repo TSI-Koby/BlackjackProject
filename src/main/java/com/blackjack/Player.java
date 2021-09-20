@@ -81,15 +81,17 @@ public class Player {
             tempHandTotal += value;
         }
         player.setHandTotal(tempHandTotal);
-        if (tempHandTotal > 21)
+        System.out.println("tempHandTotal: " + tempHandTotal);
+        System.out.println("playerHandTotal: " + player.getHandTotal());
+        if (player.getHandTotal() > 21) {
             player.setBustStatus(true);
             System.out.println("||||||||||BUST||||||||||");
+        }
     }
 
     public static void dealerRules(Deck deck, Player player) {
         while (player.getHandTotal() < 17 && !player.getBustStatus()) {
             hitMe(deck, player);
-            updateHandTotal(player);
         }
         if(!player.getBustStatus())
         standMe(player);
