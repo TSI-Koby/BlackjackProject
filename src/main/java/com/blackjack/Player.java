@@ -93,7 +93,7 @@ public class Player {
             hitMe(deck, player);
         }
         if(!player.getBustStatus())
-        standMe(player);
+            standMe(player);
     }
 
     public static boolean blackjackCheck(Player player) {
