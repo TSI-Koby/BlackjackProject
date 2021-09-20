@@ -58,6 +58,7 @@ public class Main {
         }
         else {
             System.out.println("\nDealer's turn");
+            System.out.println(Player.displayHand(dealer));
             Player.dealerRules(deck, dealer);
             if(dealer.getBustStatus())
                 System.out.println(player.getName() + " wins");
