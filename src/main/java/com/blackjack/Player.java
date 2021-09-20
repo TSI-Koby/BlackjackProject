@@ -81,8 +81,6 @@ public class Player {
             tempHandTotal += value;
         }
         player.setHandTotal(tempHandTotal);
-        System.out.println("tempHandTotal: " + tempHandTotal);
-        System.out.println("playerHandTotal: " + player.getHandTotal());
         if (player.getHandTotal() > 21) {
             player.setBustStatus(true);
             System.out.println("||||||||||BUST||||||||||");
