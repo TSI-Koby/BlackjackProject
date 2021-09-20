@@ -3,25 +3,13 @@ import java.util.Scanner;
 
 public class Main {
 
-    private static Deck deck;
-    private static Player player;
-    private static Player dealer;
-    private static PlayerList playerList;
-
-
     public static void main(String[] args) {
-        initMain();
-        playerTurn();
-        dealerTurn();
-    }
-
-    public static void initMain(){
-        playerList = new PlayerList();
-        player = new Player("Geoff");
-        dealer = new Player("Dealer");
+        PlayerList playerList = new PlayerList();
+        Player player = new Player("Geoff");
+        Player dealer = new Player("Dealer");
         playerList.addToPlayerList(player);
         playerList.addToPlayerList(dealer);
-        deck = new Deck(1);
+        Deck deck = new Deck(1);
         Deck.shuffleDeck(deck);
         Deck.dealCards(deck, playerList);
         System.out.println(dealer.getName());
@@ -29,9 +17,6 @@ public class Main {
         System.out.println(player.getName());
         System.out.println(Player.displayHand(player));
         Player.updateHandTotal(player);
-    }
-
-    public static void playerTurn() {
         do {
             int input = Integer.parseInt(takeInput("1 for Hit, 2 for Stand"));
             switch(input) {
@@ -47,9 +32,6 @@ public class Main {
             }
         }
         while(!player.getBustStatus() && !player.getStandStatus());
-    }
-
-    public static void dealerTurn() {
         if(player.getBustStatus()) {
             System.out.println(dealer.getName() + " wins");
         }
@@ -66,6 +48,7 @@ public class Main {
             else
                 System.out.println(dealer.getName() + " wins");
         }
+
     }
 
 
