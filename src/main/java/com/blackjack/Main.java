@@ -3,10 +3,42 @@ import java.util.Scanner;
 
 public class Main {
 
+<<<<<<< HEAD
     public static void main(String[] args) {
         PlayerList playerList = new PlayerList();
         Player player = new Player("Geoff");
         Player dealer = new Player("Dealer");
+=======
+    private Deck deck;
+    private Player player;
+    private Player dealer;
+    private PlayerList playerList;
+
+    public PlayerList getPlayerList() {
+        return playerList;
+    }
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public Player getDealer() {
+        return dealer;
+    }
+
+
+    public static void main(String[] args) {
+        Main main = new Main();
+        main.initMain();
+        main.playerTurn();
+        main.dealerTurn();
+    }
+
+    public void initMain(){
+        playerList = new PlayerList();
+        player = new Player("Geoff");
+        dealer = new Player("Dealer");
+>>>>>>> feature
         playerList.addToPlayerList(player);
         playerList.addToPlayerList(dealer);
         Deck deck = new Deck(1);
@@ -17,6 +49,12 @@ public class Main {
         System.out.println(player.getName());
         System.out.println(Player.displayHand(player));
         Player.updateHandTotal(player);
+<<<<<<< HEAD
+=======
+    }
+
+    public void playerTurn() {
+>>>>>>> feature
         do {
             int input = Integer.parseInt(takeInput("1 for Hit, 2 for Stand"));
             switch(input) {
@@ -32,6 +70,12 @@ public class Main {
             }
         }
         while(!player.getBustStatus() && !player.getStandStatus());
+<<<<<<< HEAD
+=======
+    }
+
+    public void dealerTurn() {
+>>>>>>> feature
         if(player.getBustStatus()) {
             System.out.println(dealer.getName() + " wins");
         }
@@ -40,6 +84,7 @@ public class Main {
         }
         else {
             System.out.println("\nDealer's turn");
+            System.out.println(Player.displayHand(dealer));
             Player.dealerRules(deck, dealer);
             if(dealer.getBustStatus())
                 System.out.println(player.getName() + " wins");
@@ -52,7 +97,7 @@ public class Main {
     }
 
 
-    public static String takeInput(String inputRequest) {
+    public String takeInput(String inputRequest) {
         System.out.println("Enter " + inputRequest + " :");
         Scanner keyboard = new Scanner(System.in);
         return keyboard.nextLine();
