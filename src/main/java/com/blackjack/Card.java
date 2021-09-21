@@ -7,6 +7,17 @@ public class Card {
     private boolean faceCard;
     private String faceCardType;
 
+    public void createCard(int cardValue, String cardSuit, boolean faceCard, String faceCardType) {
+        this.cardValue = cardValue;
+        this.cardSuit = cardSuit;
+        this.faceCard = faceCard;
+        this.faceCardType = faceCardType;
+    }
+
+    public void createCard(int cardValue, String cardSuit, boolean faceCard) {
+        createCard(cardValue, cardSuit, faceCard, null);
+    }
+
     public int getCardValue() {
         return cardValue;
     }
