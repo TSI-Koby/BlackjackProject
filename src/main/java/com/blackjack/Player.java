@@ -105,7 +105,7 @@ public class Player {
     public static String displayHand(Player player) {
         StringBuilder stringBuilder = new StringBuilder();
         for (Card c : player.getHand()) {
-            String suit;
+            String suit = "";
             switch (c.getCardSuit()) {
                 case "hearts":
                     suit = "♥";
@@ -119,8 +119,6 @@ public class Player {
                 case "spades":
                     suit = "♠";
                     break;
-                default:
-                    throw new IllegalStateException("Unexpected value: " + c.getCardSuit());
             }
             if (c.isFaceCard()) {
                 stringBuilder.append("[").append(c.getFaceCardType()).append(suit).append("] ");
@@ -135,7 +133,7 @@ public class Player {
         StringBuilder stringBuilder = new StringBuilder();
         List<Card> playerHand = player.getHand();
         Card card = playerHand.get(0);
-        String suit;
+        String suit = "";
         switch (card.getCardSuit()) {
             case "hearts":
                 suit = "♥";
@@ -149,8 +147,6 @@ public class Player {
             case "spades":
                 suit = "♠";
                 break;
-            default:
-                throw new IllegalStateException("Unexpected value: " + card.getCardSuit());
         }
         if (card.isFaceCard()) {
             stringBuilder.append("[").append(card.getFaceCardType()).append(suit).append("] ");
