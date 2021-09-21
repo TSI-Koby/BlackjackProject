@@ -63,7 +63,7 @@ class PlayerTest {
     @Test
     @DisplayName("dealerRules test")
     void dealerRules() {
-        Player dealer = new Player("Geoff");
+        Player dealer = new Player("Dealer");
         Deck deck = new Deck(1);
         Card card1 = new Card();
         card1.createCard(5, "clubs", false);
@@ -113,6 +113,24 @@ class PlayerTest {
         player.addToHand(card1);
         assertEquals("[5♥] ", Player.displayHand(player), "displayHand test failure: expected [5♥] ," +
                 " actual: " + Player.displayHand(player));
+    }
+
+    @Test
+    @DisplayName("dealerCard test")
+    void dealerCard() {
+        Player dealer = new Player("Dealer");
+        Card card5 = new Card();
+        card5.createCard(10, "spades", true, "queen");
+        dealer.addToHand(card5);
+        assertEquals("[queen♠] ", Player.dealerCard(dealer), "dealerCard test failure: " +
+                "expected [queen♠] , actual: " + Player.dealerCard(dealer));
+        List<Card> hand = new ArrayList<>();
+        dealer.setHand(hand);
+        Card card6 = new Card();
+        card6.createCard(10, "diamonds", true, "king");
+        dealer.addToHand(card6);
+        assertEquals("[king♦] ", Player.dealerCard(dealer), "dealerCard test failure: " +
+                "expected [queen♠] , actual: " + Player.dealerCard(dealer));
     }
 
     @Test
