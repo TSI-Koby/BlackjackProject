@@ -60,7 +60,7 @@ class DeckTest {
 
     @Test
     @DisplayName("get/set numberOfDecks test")
-    void SetGetNumberOfDecks() {
+    void getNumberOfDecks() {
         Deck deck = new Deck(1);
         deck.setNumberOfDecks(2);
         assertEquals(2, deck.getNumberOfDecks(), "get/set numberOfDecks failure");

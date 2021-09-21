@@ -106,7 +106,7 @@ class PlayerTest {
 
     @Test
     @DisplayName("get/set name test")
-    void SetGetName() {
+    void getName() {
         Player player = new Player("Geoff");
         player.setName("Tony");
         assertEquals("Tony", player.getName(), "get/set name test failure");
