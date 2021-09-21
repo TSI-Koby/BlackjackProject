@@ -130,7 +130,14 @@ class PlayerTest {
         card6.createCard(10, "diamonds", true, "king");
         dealer.addToHand(card6);
         assertEquals("[king♦] ", Player.dealerCard(dealer), "dealerCard test failure: " +
-                "expected [queen♠] , actual: " + Player.dealerCard(dealer));
+                "expected [king♦] , actual: " + Player.dealerCard(dealer));
+        hand.clear();
+        dealer.setHand(hand);
+        Card card7 = new Card();
+        card7.createCard(10, "clubs", true, "jack");
+        dealer.addToHand(card7);
+        assertEquals("[jack♣] ", Player.dealerCard(dealer), "dealerCard test failure: " +
+                "expected [jack♣] , actual: " + Player.dealerCard(dealer));
     }
 
     @Test
