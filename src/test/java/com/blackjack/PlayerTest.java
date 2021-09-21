@@ -74,7 +74,8 @@ class PlayerTest {
         Player.dealerRules(deck, dealer);
         assertTrue(dealer.getHand().size() > 2, "dealerRules test failure: expected size > 2," +
                 " actual size: " + dealer.getHand().size());
-        assertTrue(dealer.getStandStatus() || dealer.getBustStatus(), "dealerRules test failure: I'M SO ANGRY");
+        assertTrue(dealer.getStandStatus() || dealer.getBustStatus(), "dealerRules test failure: " +
+                "dealer not standing or bust");
         List<Card> hand = new ArrayList<>();
         dealer.setHand(hand);
         dealer.setBustStatus(false);
