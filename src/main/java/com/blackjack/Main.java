@@ -3,12 +3,6 @@ import java.util.Scanner;
 
 public class Main {
 
-<<<<<<< HEAD
-    public static void main(String[] args) {
-        PlayerList playerList = new PlayerList();
-        Player player = new Player("Geoff");
-        Player dealer = new Player("Dealer");
-=======
     private Deck deck;
     private Player player;
     private Player dealer;
@@ -38,7 +32,6 @@ public class Main {
         playerList = new PlayerList();
         player = new Player("Geoff");
         dealer = new Player("Dealer");
->>>>>>> feature
         playerList.addToPlayerList(player);
         playerList.addToPlayerList(dealer);
         Deck deck = new Deck(1);
@@ -49,12 +42,9 @@ public class Main {
         System.out.println(player.getName());
         System.out.println(Player.displayHand(player));
         Player.updateHandTotal(player);
-<<<<<<< HEAD
-=======
     }
 
     public void playerTurn() {
->>>>>>> feature
         do {
             int input = Integer.parseInt(takeInput("1 for Hit, 2 for Stand"));
             switch(input) {
@@ -70,12 +60,9 @@ public class Main {
             }
         }
         while(!player.getBustStatus() && !player.getStandStatus());
-<<<<<<< HEAD
-=======
     }
 
     public void dealerTurn() {
->>>>>>> feature
         if(player.getBustStatus()) {
             System.out.println(dealer.getName() + " wins");
         }
@@ -95,8 +82,7 @@ public class Main {
         }
 
     }
-
-
+    
     public String takeInput(String inputRequest) {
         System.out.println("Enter " + inputRequest + " :");
         Scanner keyboard = new Scanner(System.in);
