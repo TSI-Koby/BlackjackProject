@@ -17,7 +17,7 @@ class MainTest {
         public String takeInput(String inputRequest) {
             String string = outputArray[inputCounter];
             inputCounter++;
-            inputCounter = (inputCounter + 1) % (outputArray.length);
+            inputCounter = inputCounter % outputArray.length;
             return string;
         }
     }
@@ -38,7 +38,7 @@ class MainTest {
     void playerTurn() {
         dummyMain main = new dummyMain();
         main.initMain();
-        main.setOutputArray(new String[]{"1", "3"});
+        main.setOutputArray(new String[]{"3", "1"});
         main.playerTurn();
         assertTrue(main.getPlayer().getBustStatus(), "playerTurn incorrect bust status");
     }

@@ -34,7 +34,7 @@ public class Main {
         dealer = new Player("Dealer");
         playerList.addToPlayerList(player);
         playerList.addToPlayerList(dealer);
-        Deck deck = new Deck(1);
+        deck = new Deck(1);
         Deck.shuffleDeck(deck);
         Deck.dealCards(deck, playerList);
         System.out.println(dealer.getName());
@@ -82,7 +82,7 @@ public class Main {
         }
 
     }
-    
+
     public String takeInput(String inputRequest) {
         System.out.println("Enter " + inputRequest + " :");
         Scanner keyboard = new Scanner(System.in);
