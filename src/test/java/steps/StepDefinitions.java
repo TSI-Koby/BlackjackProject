@@ -10,6 +10,7 @@ import com.blackjack.*;
 public class StepDefinitions {
     Deck deck = new Deck(1);
     Player player = new Player("Geoff");
+    Player dealer = new Player("Dealer");
 
     @Given("player has hand 1♥ and 1♦")
     public void givenHand() {
@@ -42,5 +43,27 @@ public class StepDefinitions {
     @And("player should be recorded as standing")
     public void playerShouldBeRecordedAsStanding() {
         assertTrue(player.getStandStatus(), "player not standing");
+    }
+
+    @Given("dealer has hand {int}♣ and {int}♠")
+    public void dealerHasHand(int arg0, int arg1) {
+        dealer.getHand().clear();
+        Card card1 = new Card();
+        card1.createCard(arg0, "clubs", false);
+        dealer.addToHand(card1);
+        Card card2 = new Card();
+        card2.createCard(arg1, "spades", false);
+        dealer.addToHand(card2);
+    }
+
+
+    @When("dealerTurn runs")
+    public void dealerTurnRuns() {
+        Player.dealerRules(deck, dealer);
+    }
+
+    @Then("dealer should stand")
+    public void dealerShouldStand(){
+        assertTrue(dealer.getStandStatus());
     }
 }
