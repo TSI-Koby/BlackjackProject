@@ -12,13 +12,13 @@ public class StepDefinitions {
     Player player = new Player("Geoff");
     Player dealer = new Player("Dealer");
 
-    @Given("player has hand 1♥ and 1♦")
-    public void givenHand() {
+    @Given("player has hand {int}♥ and {int}♦")
+    public void givenHand(int arg0, int arg1) {
         Card card1 = new Card();
-        card1.createCard(1, "hearts", false);
+        card1.createCard(arg0, "hearts", false);
         player.addToHand(card1);
         Card card2 = new Card();
-        card2.createCard(1, "diamonds", false);
+        card2.createCard(arg1, "diamonds", false);
         player.addToHand(card2);
     }
 
